@@ -23,6 +23,7 @@ public class Initializer {
         Role role1 = new Role("ROLE_ADMIN");
         Role role2 = new Role("ROLE_USER");
 
+
         userService.addRole(role1);
         userService.addRole(role2);
 
@@ -31,14 +32,15 @@ public class Initializer {
 
         roleAdmin.add(role1);
         roleAdmin.add(role2);
+
         roleUser.add(role2);
 
-        User adminUser1 = new User("AdminUser", "SuperAdminUser", 111, "adminUser@adminUser","adminUser" , roleAdmin);
+
         User user1 = new User("User", "MainUser", 55, "user@user.ru","u", roleUser);
         User admin1 = new User("admin", "MainAdmin", 99, "admin@admin.ru","a", roleAdmin);
 
         userService.add(admin1);
         userService.add(user1);
-        userService.add(adminUser1);
+
     }
 }
